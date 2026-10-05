@@ -122,4 +122,3 @@ capacity, profile-specific reliability/speed ranking, fairness and fenced leases
 
 Configure Chat's `MUNDUSX_MEDIA_PLANNER_URL` to this endpoint after deploying it.
 The existing `/v1/plan` remains the LLM orchestration contract.
-

@@ -122,3 +122,7 @@ capacity, profile-specific reliability/speed ranking, fairness and fenced leases
 
 Configure Chat's `MUNDUSX_MEDIA_PLANNER_URL` to this endpoint after deploying it.
 The existing `/v1/plan` remains the LLM orchestration contract.
+
+## License
+
+Project-owned source code is licensed under [Apache License 2.0](LICENSE), including commercial use. Third-party components retain their respective licenses and notices.

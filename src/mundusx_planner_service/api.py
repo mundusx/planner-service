@@ -12,6 +12,17 @@ from .planner import plan_request
 app = FastAPI(title="MundusX Planner Service", version=__version__)
 
 
+class ArtifactPlanRequest(BaseModel):
+    format: str = Field(min_length=1, max_length=16)
+    prompt: str = Field(min_length=1, max_length=4000)
+
+
+@app.post("/v1/artifacts/plan")
+def create_artifact_plan(body: ArtifactPlanRequest) -> dict[str, Any]:
+    from .artifact import artifact_plan
+    return artifact_plan(body.model_dump())
+
+
 class MediaPlanRequest(BaseModel):
     kind: str
     image_model: str | None = None
